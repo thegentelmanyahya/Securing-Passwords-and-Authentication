@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Factor Authentication</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f9fc;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container animate__animated animate__fadeIn">
+        <h2 class="text-center">Two-Factor Authentication</h2>
+        <form action="/two_factor" method="post">
+            <div class="form-group">
+                <label for="token">Enter the 2FA token:</label>
+                <input type="text" class="form-control" id="token" name="token" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Verify</button>
+        </form>
+        <a href="/" class="btn btn-secondary btn-block mt-3">Back to Login</a>
+    </div>
+</body>
+</html>
